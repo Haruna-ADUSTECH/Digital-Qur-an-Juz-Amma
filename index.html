@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUZU'U AMMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('background-pattern.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Traditional Arabic', sans-serif;
+            direction: rtl;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #D4AF37;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .surah {
+            cursor: pointer;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .surah:hover {
+            background-color: #e0e0e0;
+        }
+
+        .ayat {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            text-align: right;
+            color: #333;
+        }
+
+        .ayat.active {
+            display: block;
+        }
+
+        .tajweed-mad { color: red; }
+        .tajweed-ghunnah { color: green; }
+        .tajweed-ikhfa { color: blue; }
+        .tajweed-idgham { color: magenta; }
+        .tajweed-qalqalah { color: orange; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JUZU'U AMMA</h1>
+        <input type="text" id="searchBar" placeholder="Search for a Surah or verse...">
+
+        <!-- Surah List -->
+        <div class="surah" onclick="showSurah('naba')">An-Naba' (78)</div>
+        <div class="surah" onclick="showSurah('naziat')">An-Nazi'at (79)</div>
+        <div class="surah" onclick="showSurah('abasa')">Abasa (80)</div>
+        <div class="surah" onclick="showSurah('takwir')">At-Takwir (81)</div>
+        <div class="surah" onclick="showSurah('infitar')">Al-Infitar (82)</div>
+        <div class="surah" onclick="showSurah('mutaffifin')">Al-Mutaffifin (83)</div>
+        <!-- Continue with other surahs... -->
+
+        <!-- Surah An-Naba' -->
+        <div id="naba" class="ayat">
+            <p><span class="tajweed-mad">عَمَّ يَتَسَاءَلُونَ</span></p>
+            <p><span class="tajweed-ghunnah">عَنِ النَّبَإِ الْعَظِيمِ</span></p>
+            <p><span class="tajweed-mad">الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ</span></p>
+            <p><span class="tajweed-qalqalah">كَلَّا سَيَعْلَمُونَ</span></p>
+            <p><span class="tajweed-mad">ثُمَّ كَلَّا سَيَعْلَمُونَ</span></p>
+            <p><span class="tajweed-ikhfa">أَلَمْ نَجْعَلِ</span> الْأَرْضَ <span class="tajweed-mad">مِهَادًا</span></p>
+            <p><span class="tajweed-ghunnah">وَالْجِبَالَ أَوْتَادًا</span></p>
+            <p><span class="tajweed-ikhfa">وَخَلَقْنَاكُمْ أَزْوَاجًا</span></p>
+            <p><span class="tajweed-idgham">وَجَعَلْنَا نَوْمَكُمْ</span> سُبَاتًا</p>
+            <p><span class="tajweed-ikhfa">وَجَعَلْنَا اللَّيْلَ</span> لِبَاسًا</p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah An-Nazi'at -->
+        <div id="naziat" class="ayat">
+            <p><span class="tajweed-ikhfa">وَالنَّازِعَاتِ غَرْقًا</span></p>
+            <p><span class="tajweed-idgham">وَالنَّاشِطَاتِ نَشْطًا</span></p>
+            <p><span class="tajweed-mad">وَالسَّابِحَاتِ سَبْحًا</span></p>
+            <p><span class="tajweed-ikhfa">فَالسَّابِقَاتِ سَبْقًا</span></p>
+            <p><span class="tajweed-mad">فَالْمُدَبِّرَاتِ أَمْرًا</span></p>
+            <p><span class="tajweed-qalqalah">يَوْمَ تَرْجُفُ</span> الرَّاجِفَةُ</p>
+            <p><span class="tajweed-mad">تَتْبَعُهَا</span> الرَّادِفَةُ</p>
+            <p><span class="tajweed-ghunnah">قُلُوبٌ يَوْمَئِذٍ</span> وَاجِفَةٌ</p>
+            <p><span class="tajweed-qalqalah">أَبْصَارُهَا خَاشِعَةٌ</span></p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah Abasa -->
+        <div id="abasa" class="ayat">
+            <p><span class="tajweed-qalqalah">عَبَسَ وَتَوَلَّى</span></p>
+            <p><span class="tajweed-ghunnah">أَن جَاءَهُ الْأَعْمَى</span></p>
+            <p><span class="tajweed-ikhfa">وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّى</span></p>
+            <p><span class="tajweed-idgham">أَوْ يَذَّكَّرُ</span> فَتَنفَعَهُ الذِّكْرَى</p>
+            <p><span class="tajweed-qalqalah">أَمَّا مَنِ اسْتَغْنَى</span></p>
+            <p><span class="tajweed-mad">فَأَنتَ لَهُ تَصَدَّى</span></p>
+            <p><span class="tajweed-ghunnah">وَمَا عَلَيْكَ أَلَّا يَزَّكَّى</span></p>
+            <p><span class="tajweed-idgham">وَأَمَّا مَن جَاءَكَ</span> يَسْعَى</p>
+            <p><span class="tajweed-ikhfa">وَهُوَ يَخْشَى</span></p>
+            <p><span class="tajweed-qalqalah">فَأَنتَ عَنْهُ تَلَهَّى</span></p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah At-Takwir -->
+        <div id="takwir" class="ayat">
+            <p><span class="tajweed-qalqalah">إِذَا الشَّمْسُ كُوِّرَتْ</span></p>
+            <p><span class="tajweed-ghunnah">وَإِذَا النُّجُومُ انكَدَرَتْ</span></p>
+            <p><span class="tajweed-ikhfa">وَإِذَا الْجِبَالُ</span> سُيِّرَتْ</p>
+            <p><span class="tajweed-idgham">وَإِذَا الْعِشَارُ عُطِّلَتْ</span></p>
+            <p><span class="tajweed-mad">وَإِذَا الْوُحُوشُ</span> حُشِرَ</p>
+            <p><span class="tajweed-idgham">وَإِذَا الْبِحَارُ</span> سُجِّرَتْ</p>
+            <p><span class="tajweed-ghunnah">وَإِذَا النُّفُوسُ زُوِّجَتْ</span></p>
+            <p><span class="tajweed-idgham">وَإِذَا الْمَوْءُودَةُ</span> سُئِلَتْ</p>
+            <p><span class="tajweed-qalqalah">بِأَيِّ ذَنبٍ</span> قُتِلَتْ</p>
+            <p><span class="tajweed-ikhfa">وَإِذَا الصُّحُفُ</span> نُشِرَتْ</p>
+            <p><span class="tajweed-ghunnah">وَإِذَا السَّمَاءُ كُشِطَتْ</span></p>
+            <p><span class="tajweed-idgham">وَإِذَا الْجَحِيمُ سُعِّرَتْ</span></p>
+            <p><span class="tajweed-qalqalah">وَإِذَا الْجَنَّةُ</span> أُزْلِفَتْ</p>
+            <p><span class="tajweed-idgham">عَلِمَتْ نَفْسٌ مَّا</span> أَحْضَرَتْ</p>
+            <p><span class="tajweed-qalqalah">فَلَا أُقْسِمُ</span> بِالْخُنَّسِ</p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah Al-Infitar -->
+        <div id="infitar" class="ayat">
+            <p><span class="tajweed-qalqalah">إِذَا السَّمَاءُ انْفَطَرَتْ</span></p>
+            <p><span class="tajweed-ghunnah">وَإِذَا الْكَوَاكِبُ انْتَثَرَتْ</span></p>
+            <p><span class="tajweed-ikhfa">وَإِذَا الْبِحَارُ</span> فُجِّرَتْ</p>
+            <p><span class="tajweed-idgham">وَإِذَا الْقُبُورُ</span> بُعْثِرَتْ</p>
+            <p><span class="tajweed-mad">عَلِمَتْ نَفْسٌ</span> مَّا قَدَّمَتْ وَأَخَّرَتْ</p>
+            <p><span class="tajweed-ghunnah">يَا أَيُّهَا الْإِنسَانُ</span> مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ</p>
+            <p><span class="tajweed-qalqalah">الَّذِي خَلَقَكَ</span> فَسَوَّاكَ فَعَدَلَكَ</p>
+            <p><span class="tajweed-idgham">فِي أَيِّ صُورَةٍ</span> مَّا شَاءَ رَكَّبَكَ</p>
+            <p><span class="tajweed-qalqalah">كَلَّا بَلْ تُكَذِّبُونَ</span> بِالدِّينِ</p>
+            <p><span class="tajweed-ikhfa">وَإِنَّ عَلَيْكُمْ</span> لَحَافِظِينَ</p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah Al-Mutaffifin -->
+        <div id="mutaffifin" class="ayat">
+            <p><span class="tajweed-idgham">وَيْلٌ لِّلْمُطَفِّفِينَ</span></p>
+            <p><span class="tajweed-qalqalah">الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ</span> يَسْتَوْفُونَ</p>
+            <p><span class="tajweed-idgham">وَإِذَا كَالُوهُمْ</span> أَو وَّزَنُوهُمْ يُخْسِرُونَ</p>
+            <p><span class="tajweed-ikhfa">أَلَا يَظُنُّ أُولَئِكَ</span> أَنَّهُم مَّبْعُوثُونَ</p>
+            <p><span class="tajweed-idgham">لِيَوْمٍ عَظِيمٍ</span></p>
+            <p><span class="tajweed-ikhfa">يَوْمَ يَقُومُ النَّاسُ</span> لِرَبِّ الْعَالَمِينَ</p>
+            <p><span class="tajweed-qalqalah">كَلَّا إِنَّ كِتَابَ الْفُجَّارِ</span> لَفِي سِجِّينٍ</p>
+            <p><span class="tajweed-mad">وَمَا أَدْرَاكَ مَا</span> سِجِّينٌ</p>
+            <p><span class="tajweed-idgham">كِتَابٌ مَّرْقُومٌ</span></p>
+            <p><span class="tajweed-qalqalah">وَيْلٌ يَوْمَئِذٍ</span> لِّلْمُكَذِّبِينَ</p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah Al-Inshiqaq -->
+        <div id="inshiqaq" class="ayat">
+            <p><span class="tajweed-mad">إِذَا السَّمَاءُ انشَقَّتْ</span></p>
+            <p><span class="tajweed-qalqalah">وَأَذِنَتْ لِرَبِّهَا</span> وَحُقَّتْ</p>
+            <p><span class="tajweed-ghunnah">وَإِذَا الْأَرْضُ</span> مُدَّتْ</p>
+            <p><span class="tajweed-idgham">وَأَلْقَتْ مَا فِيهَا</span> وَتَخَلَّتْ</p>
+            <p><span class="tajweed-ikhfa">وَأَذِنَتْ لِرَبِّهَا</span> وَحُقَّتْ</p>
+            <p><span class="tajweed-qalqalah">يَا أَيُّهَا الْإِنسَانُ</span> إِنَّكَ كَادِحٌ إِلَى رَبِّكَ كَدْحًا فَمُلَاقِيهِ</p>
+            <p><span class="tajweed-mad">فَأَمَّا مَنْ أُوتِيَ</span> كِتَابَهُ بِيَمِينِهِ</p>
+            <p><span class="tajweed-ghunnah">فَسَوْفَ يُحَاسَبُ</span> حِسَابًا يَسِيرًا</p>
+            <p><span class="tajweed-qalqalah">وَيَنقَلِبُ</span> إِلَى أَهْلِهِ مَسْرُورًا</p>
+            <p><span class="tajweed-ikhfa">وَأَمَّا مَنْ أُوتِيَ</span> كِتَابَهُ وَرَاءَ ظَهْرِهِ</p>
+            <!-- Continue with all verses... -->
+        </div>
+
+        <!-- Surah Al-Buruj -->
+        <div id="buruj" class="ayat">
+            <p><span class="tajweed-mad">وَالسَّمَاءِ</span> ذَاتِ الْبُرُوجِ</p>
+            <p><span class="tajweed-ghunnah">وَالْيَوْمِ الْمَوْعُودِ</span></p>
+            <p><span class="tajweed-qalqalah">وَشَاهِدٍ</span> وَمَشْهُودٍ</p>
+            <p><span class="tajweed-idgham">قُتِلَ أَصْحَابُ</span> الْأُخْدُودِ</p>
+            <p><span class="tajweed-ikhfa">النَّارِ ذَاتِ</span> الْوَقُودِ</p>
+            <p><span class="tajweed-qalqalah">إِذْ هُمْ عَلَيْه
